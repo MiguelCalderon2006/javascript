@@ -77,6 +77,15 @@ console.log(Math.floor(Math.random()*100)+1)
 console.log("----------------Coding Challenge----------------");
 console.log("Write code that will return a random letter from your name")
 // Write code that will return a random letter from your name
-let random_letter = Math.floor(Math.random()*myName.length)+1
-console.log(myName.charAt(random_letter-1))
+let random_letter = Math.floor(Math.random()*myName.length)
+console.log(myName.charAt(random_letter))
 console.log("----------------If statments----------------");
+
+let ranNum = Math.floor(Math.random() * 10) + 1
+if(ranNum>5)
+{
+    console.log(`random num '${ranNum}' is greater than 5`)
+}else
+{
+    console.log(`random num '${ranNum}' is less than 5`)
+}
