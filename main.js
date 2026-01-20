@@ -39,7 +39,7 @@ console.log = function(...args) {
 
 
 
-console.log("----------------Numbers----------------");
+console.log("----------------Strings-----------------");
 let myName = "variable";
 console.log(myName.length);
 console.log(myName.charAt(1));
@@ -60,9 +60,20 @@ console.log(num.toFixed(3))
 console.log(Number.parseInt(num))
 console.log(typeof num)
 console.log(num.toString())
-console.log(Number.isNAN("dh"))
+console.log(Number.isNaN("dh"))
 
 console.log("----------------Math Methods----------------");
+console.log(Math.PI)
+console.log(Math.trunc(Math.PI))
+console.log(Math.round(3.5))
+console.log(Math.ceil(num))
+console.log(Math.floor(num))
+console.log(Math.pow(num,8))
+console.log(Math.min(num,8,83))
+console.log(Math.max(num,8))
+console.log(Math.floor(Math.random()*10)+1)
+console.log(Math.floor(Math.random()*100)+1)
+
 
 
 
