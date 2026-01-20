@@ -40,7 +40,7 @@ console.log = function(...args) {
 
 
 console.log("----------------Strings-----------------");
-let myName = "variable";
+let myName = "Mike";
 console.log(myName.length);
 console.log(myName.charAt(1));
 console.log(myName.indexOf("a"));
@@ -74,6 +74,9 @@ console.log(Math.max(num,8))
 console.log(Math.floor(Math.random()*10)+1)
 console.log(Math.floor(Math.random()*100)+1)
 
-
-
-
+console.log("----------------Coding Challenge----------------");
+console.log("Write code that will return a random letter from your name")
+// Write code that will return a random letter from your name
+let random_letter = Math.floor(Math.random()*myName.length)+1
+console.log(myName.charAt(random_letter-1))
+console.log("----------------If statments----------------");
