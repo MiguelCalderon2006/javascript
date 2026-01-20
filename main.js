@@ -39,7 +39,7 @@ console.log = function(...args) {
 
 
 
-
+console.log("----------------Numbers----------------");
 let myName = "variable";
 console.log(myName.length);
 console.log(myName.charAt(1));
@@ -52,9 +52,17 @@ console.log(myName.includes("variable"));
 console.log(myName.split("r"));
 console.log(myName.replace("variable", "variable2"));
 
-console.log("--------------------------------");
-const myNumber = 10;
-console.log(myNumber)
-console.log(Number.isInteger(myNumber));
-console.log(myNumber.toFixed(3))
+console.log("----------------Numbers----------------");
+let num = 10;
+console.log(num)
+console.log(Number.isInteger(num));
+console.log(num.toFixed(3))
+console.log(Number.parseInt(num))
+console.log(typeof num)
+console.log(num.toString())
+console.log(Number.isNAN("dh"))
+
+console.log("----------------Math Methods----------------");
+
+
 
