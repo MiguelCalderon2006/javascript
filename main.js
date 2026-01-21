@@ -99,6 +99,7 @@ if (score >= 89) {
 }
 console.log(grade)
 
+// Rock Paper Scissors
 let player1 = "paper";
 let computer = "rock";
 
@@ -122,3 +123,5 @@ else if (player1 === "paper") {
     } else { console.log("player 1 wins") } // player1=paper, computer=rock
 
 }
+
+console.log("----------------Switch Statements----------------");
