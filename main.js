@@ -99,7 +99,7 @@ if (score >= 89) {
 }
 console.log(grade)
 
-// Rock Paper Scissors
+console.log("----------------Rock Paper Scissors----------------");
 let player1 = "paper";
 let computer = "rock";
 
@@ -125,3 +125,36 @@ else if (player1 === "paper") {
 }
 
 console.log("----------------Switch Statements----------------");
+
+
+switch (Math.floor(Math.random() * 3) + 1) {
+    case 1: console.log(1);
+        break;
+    case 2: console.log(2);
+        break;
+    case 3: console.log(3);
+        break;
+    default: console.log("No Match")
+}
+console.log("----------------Switch Statements Rock paper scissors----------------");
+player1 = "scissors";
+computer = "rock";
+switch (player1) {
+    case computer: console.log("Tie");
+        break;
+    case "rock":
+        if (computer === "paper") {
+            console.log("Computer wins");
+        } else { console.log("Player 1 wins") }
+        break;
+    case "paper":
+        if (computer === "rock") {
+            console.log("Player 1 wins");
+        } else { console.log("Computer wins") }
+        break;
+
+    case "scissors": if (computer === "rock") {
+        console.log("Computer wins");
+    } else { console.log("Player 1 wins") }
+        break;
+}
