@@ -158,3 +158,5 @@ switch (player1) {
     } else { console.log("Player 1 wins") }
         break;
 }
+
+console.log("----------------Ternary Operator----------------");
