@@ -136,27 +136,37 @@ switch (Math.floor(Math.random() * 3) + 1) {
         break;
     default: console.log("No Match")
 }
-console.log("----------------Switch Statements Rock paper scissors----------------");
+console.log("----------------Switch Statements Rock paper scissors & ternary operator----------------");
+//condition ? ifTrue : ifFalse
+
 player1 = "scissors";
 computer = "rock";
 switch (player1) {
     case computer: console.log("Tie");
         break;
     case "rock":
-        if (computer === "paper") {
-            console.log("Computer wins");
-        } else { console.log("Player 1 wins") }
+        computer === "paper" ?
+            console.log("Computer wins") :
+            console.log("Player 1 wins");
         break;
     case "paper":
-        if (computer === "rock") {
-            console.log("Player 1 wins");
-        } else { console.log("Computer wins") }
+        computer === "rock" ?
+            console.log("Player 1 wins") :
+            console.log("Computer wins");
         break;
 
-    case "scissors": if (computer === "rock") {
-        console.log("Computer wins");
-    } else { console.log("Player 1 wins") }
+    case "scissors": computer === "rock" ?
+        console.log("Computer wins") :
+        console.log("Player 1 wins");
         break;
 }
+//chain them example
 
-console.log("----------------Ternary Operator----------------");
+let yes = "yes"
+let no = "no"
+
+no === yes ? console.log("unanimous") :
+    no !== yes ? console.log("split decision") :
+        console.log("undefined try again");
+
+
