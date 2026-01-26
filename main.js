@@ -170,3 +170,15 @@ no === yes ? console.log("unanimous") :
         console.log("undefined try again");
 
 console.log("----------------User Input----------------");
+alert("ALERT");
+let myBool = confirm("ok is true \n cancel is false")
+console.log("you chose: ", myBool)
+let myName1 = prompt("pleasne enter your name");
+
+myName1 ?
+    console.log("Your chosen name is: ", myName1.trim())
+
+    :
+    console.log("you did not enter a name.");
+
+console.log("----------------Loops----------------");
