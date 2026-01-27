@@ -170,15 +170,42 @@ no === yes ? console.log("unanimous") :
         console.log("undefined try again");
 
 console.log("----------------User Input----------------");
-alert("ALERT");
-let myBool = confirm("ok is true \n cancel is false")
-console.log("you chose: ", myBool)
-let myName1 = prompt("pleasne enter your name");
+// alert("ALERT");
+// let myBool = confirm("ok is true \n cancel is false")
+// console.log("you chose: ", myBool)
+// let myName1 = prompt("pleasne enter your name");
 
-myName1 ?
-    console.log("Your chosen name is: ", myName1.trim())
+// myName1 ?
 
-    :
-    console.log("you did not enter a name.");
+//     console.log("Your chosen name is: ", myName1.trim())
+
+//     :
+//     console.log("you did not enter a name.");
 
 console.log("----------------Loops----------------");
+
+let myNumber = 0;
+console.log("while loop example:")
+while (myNumber <= 50) {
+    myNumber += 10;
+    console.log(myNumber);
+}
+
+console.log("do while loop example: ")
+do {
+    myNumber += 10;
+    console.log(myNumber);
+} while (myNumber <= 100)
+
+console.log("For loop example: ")
+for (let i = 0; i <= 10;) {
+    console.log(i);
+    if (i === 5) break;
+    i++;
+}
+
+console.log("Continue example: ")
+for (let i = 0; i <= 5; i++) {
+    if (i === 3) continue;  // skips 3
+    console.log(i);  // prints 0, 1, 2, 4, 5
+}
