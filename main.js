@@ -235,6 +235,6 @@ const toProperCase = (names) => {
 
 console.log(sum(4));
 console.log(getUserNameFromEmail("miguel@gmail.com"))
-console.log(toProperCase("miGUel"))
+console.log(toProperCase("miGuel"))
 
-
+console.log("----------------Scope - var, let, const----------------");
