@@ -253,12 +253,44 @@ const z = 3;
 function myFunc() {
     const z = 5;
     // local scope
-{
-    let y = 4;
-}
+    {
+        let y = 4;
+    }
 
 }
 
 console.log(x);
 
 console.log("----------------Arrays----------------");
+
+const myArray = [];
+
+myArray[0] = "Mike";
+myArray[1] = 10000;
+myArray[2] = false;
+
+console.log(myArray);
+
+console.log(myArray.length);
+
+console.log(myArray[myArray.length - 1]);//last position in the array
+
+console.log(myArray[0]);
+
+myArray.push("school");// adds to the back of  array
+console.log(myArray);
+
+const lastItem = myArray.pop();// removes the last item
+console.log(lastItem);
+
+myArray.unshift(42);// adds to the front
+console.log(myArray)
+
+myArray.shift();// remnove from the front
+console.log(myArray)
+//when indexes are removed index values change
+
+delete myArray[2]//remove from middle
+console.log(myArray)
+
+
