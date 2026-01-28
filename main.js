@@ -211,3 +211,30 @@ for (let i = 0; i <= 5; i++) {
 }
 
 console.log("----------------Functions----------------");
+
+//Function DEclaration Syntax:
+function sum(num1, num2) {
+
+    if (num2 === undefined) {
+        return num1 + num1;
+    }
+    console.log(num1);
+    console.log(num2);
+    return num1 + num2;
+}
+
+const getUserNameFromEmail = (email) => {
+    return email.slice(0, email.indexOf('@'));
+
+}
+
+
+const toProperCase = (names) => {
+    return names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
+}
+
+console.log(sum(4));
+console.log(getUserNameFromEmail("miguel@gmail.com"))
+console.log(toProperCase("miGUel"))
+
+
