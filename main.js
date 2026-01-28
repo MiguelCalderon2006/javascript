@@ -252,7 +252,13 @@ const z = 3;
 //local scope
 function myFunc() {
     const z = 5;
+    // local scope
+{
+    let y = 4;
 }
 
-console.log(x)
-console.log(y)
+}
+
+console.log(x);
+
+console.log("----------------Arrays----------------");
