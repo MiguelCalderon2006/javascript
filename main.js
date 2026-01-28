@@ -209,3 +209,5 @@ for (let i = 0; i <= 5; i++) {
     if (i === 3) continue;  // skips 3
     console.log(i);  // prints 0, 1, 2, 4, 5
 }
+
+console.log("----------------Functions----------------");
