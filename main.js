@@ -229,12 +229,13 @@ const getUserNameFromEmail = (email) => {
 }
 
 
-const toProperCase = (names) => {
-    return names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
-}
+const toProperCase = (names) =>
+    names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
+
 
 console.log(sum(4));
 console.log(getUserNameFromEmail("miguel@gmail.com"))
 console.log(toProperCase("miGuel"))
 
 console.log("----------------Scope - var, let, const----------------");
+
