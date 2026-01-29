@@ -328,3 +328,18 @@ const row3 = [1, 2, 3, 4, 5, 6];
 const grid = [row1, row2, row3];
 
 console.log(grid[2][4])
+
+
+// Shelves (1D)
+const shelfA = ["apples", "bananas"];
+const shelfB = ["milk", "eggs"];
+
+// Aisle = array of shelves (2D)
+const aisle = [shelfA, shelfB];
+console.log(aisle[0][1]);      // "bananas"
+
+// Store = array of aisles (3D)
+const store = [aisle];
+console.log(store[0][1][0]);   // "milk"
+
+console.log("----------------Objects----------------");
