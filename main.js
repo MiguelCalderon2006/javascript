@@ -293,4 +293,38 @@ console.log(myArray)
 delete myArray[2]//remove from middle
 console.log(myArray)
 
+myArray.push(1, 2, 3, 4, 5, 6)
+myArray.splice(2, 1)
+console.log(myArray)
 
+const newArray = myArray.slice(2, 6);
+console.log(newArray);
+const reverseArray = newArray.reverse();
+console.log(reverseArray);
+
+const concatArray = newArray.concat(reverseArray);
+concatArray.splice(3, 0, "---");
+// returns a new array and does nnot modify the foriginal
+console.log(concatArray);
+
+
+//spread operator
+// Arrays
+const myArrayA = ["A", "B", "C"];
+const myArrayB = ["D", "E", "F"];
+
+const array1 = [myArrayA, myArrayB];
+
+console.log(array1);
+
+const array2 = [...myArrayA, ...myArrayB];
+
+console.log(array2);
+
+const row1 = [1, 2, 3, 4, 5, 6];
+const row2 = [1, 2, 3, 4, 5, 6];
+const row3 = [1, 2, 3, 4, 5, 6];
+
+const grid = [row1, row2, row3];
+
+console.log(grid[2][4])
