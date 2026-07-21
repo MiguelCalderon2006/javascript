@@ -173,14 +173,13 @@ console.log("----------------User Input----------------");
 // alert("ALERT");
 // let myBool = confirm("ok is true \n cancel is false")
 // console.log("you chose: ", myBool)
-// let myName1 = prompt("pleasne enter your name");
+ let myName1 = prompt("pleasne enter your name");
 
-// myName1 ?
+ myName1 ?
 
-//     console.log("Your chosen name is: ", myName1.trim())
-
-//     :
-//     console.log("you did not enter a name.");
+console.log("Your chosen name is: ", myName1.trim())
+     :
+     console.log("you did not enter a name.");
 
 console.log("----------------Loops----------------");
 
@@ -343,3 +342,57 @@ const store = [aisle];
 console.log(store[0][1][0]);   // "milk"
 
 console.log("----------------Objects----------------");
+
+//object literal|KEY : VALUE
+//property  key + value but also used loosley
+const myObj = { name: "Mike" };
+
+const anotherObj = {
+    alive: true,
+    answer: 19,
+    hobbies: ["eat", "sleep", "gym", "code", "work"],
+    beverage: {
+        morning: "pre workout",
+        afternoon: "iced tea"
+    },
+    action: function () {
+        return `hello nigga, are you ready for ${this.beverage.morning}`;
+    }
+}
+
+//Dot notation(to read/access  poperty)
+console.log("Name:",myObj.name);
+
+console.log("Hobbies",anotherObj["hobbies"]);
+console.log("Morning beverage: ",anotherObj.beverage.morning);
+console.log("action:",anotherObj.action());
+
+
+const vehicle = {
+    wheels: 4,
+    engine: function () {
+        return "vroom"
+    }
+
+}
+
+const truck = Object.create(vehicle);
+console.log(truck)
+truck.doors = 2;
+console.log(truck);
+console.log(truck.wheels);// Inheritance
+console.log(truck.engine());
+const car =  Object.create(vehicle);
+car.doors = 4;
+car.engine = function (){
+    return "Whoooosh!";
+};
+console.log(car.engine());
+console.log(car.wheels);
+
+const tesla = Object.create(car);
+console.log(tesla.wheels);
+tesla.engine = function(){
+    return "zzzzzzzzz..";
+};
+console.log(tesla.engine());
