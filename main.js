@@ -429,7 +429,11 @@ console.log(guitar);
 console.log(bass);
 console.log(vocals);
 
-function sings({vocals}){
+//to pull a specific property from an object
+//destructuring within function parameter
+function sings({vocals}){//right here it is destructred
 return  `${vocals} sings` 
 };
 console.log(sings(band));
+
+console.log("----------------Classes----------------");
