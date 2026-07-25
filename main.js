@@ -169,17 +169,17 @@ no === yes ? console.log("unanimous") :
     no !== yes ? console.log("split decision") :
         console.log("undefined try again");
 
-console.log("----------------User Input----------------");
+//console.log("----------------User Input----------------");
 // alert("ALERT");
 // let myBool = confirm("ok is true \n cancel is false")
 // console.log("you chose: ", myBool)
- let myName1 = prompt("pleasne enter your name");
+// let myName1 = prompt("pleasne enter your name");
 
- myName1 ?
+ //myName1 ?
 
-console.log("Your chosen name is: ", myName1.trim())
-     :
-     console.log("you did not enter a name.");
+//console.log("Your chosen name is: ", myName1.trim())
+  //   :
+    // console.log("you did not enter a name.");
 
 console.log("----------------Loops----------------");
 
@@ -396,3 +396,40 @@ tesla.engine = function(){
     return "zzzzzzzzz..";
 };
 console.log(tesla.engine());
+
+const band = {
+    vocals:"Robert Plant",
+    guitar: "Jimmy Page",
+    bass: "Jon Paul Jones",
+    drums: "John Bonham"
+};
+
+
+delete band.drums;
+console.log(band.hasOwnProperty("drums")) 
+
+console.log(Object.keys(band))
+console.log(Object.values(band))
+
+for(let job in band){
+    console.log(`On ${job}, its ${band[job]}`);
+}
+
+//destructuring objects
+
+const {guitar:myVariable, bass:myBass } = band;
+//myvariable is being defined as guitar value from band
+console.log(myVariable);
+console.log(myBass);
+
+//another way to do this is
+console.log("method 2 up above:");
+const {guitar, bass, vocals}= band;
+console.log(guitar);
+console.log(bass);
+console.log(vocals);
+
+function sings({vocals}){
+return  `${vocals} sings` 
+};
+console.log(sings(band));
