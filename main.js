@@ -437,3 +437,96 @@ return  `${vocals} sings`
 console.log(sings(band));
 
 console.log("----------------Classes----------------");
+
+//this is a class
+class Pizza{
+    
+    //properties are created in the constructor
+    constructor (pizzaType, pizzaSize)//code runs when create an object with this class
+    
+    {
+      
+        //values are passed to become properties(key value pairs)
+        this.type = pizzaType
+        this.size = pizzaSize
+        this.crust = "original"
+        this.toppings  = []
+    }
+    getToppings()
+    {
+        return this.toppings
+    }
+
+    setToppings(toppings){
+       this.toppings.push(toppings);
+    }
+
+    //is called when you access this propertey "myPizza.pizzaCrust"
+    //this is an example but it should do more work than just return it
+    //all only if you use the get keyword method
+    getCrust(){
+        return this.crust;
+    }
+
+    //is called when you use asign operator "=" and passes what you assign as the new value
+    //this is an example but it should do more work than just return it//all only if you use the get keyword method
+    setCrust(pizzaCrust){
+        this.crust= pizzaCrust;
+    }
+
+    // method that uses this to access object instance
+    bake(){
+        console.log(
+            `Baking a ${this.size} ${this.type} ${this.toppings} ${this.crust} crust pizza` 
+        )
+    } 
+}
+
+// this line creates a new empty object, but then passes 2 values to be ran through the constructor.
+const myPizza = new Pizza("pepperoni", "small");
+
+
+
+myPizza.setCrust("niggatron")
+myPizza.setToppings ("chitlins")
+
+//getter is not used here. because propertey is accessed directly
+myPizza.bake();
+
+console.log("the crust is ", myPizza.getCrust())
+console.log("the topping is ", myPizza.getToppings())
+
+// Getter would be ran here
+//console.log(myPizza.pizzaCrust)
+
+
+//INHERITANCE BELLOW
+
+//child class inheriting from parent Pizza class
+class SpecialtyPizza extends Pizza {
+    constructor(pizzaType,pizzaSize){
+
+        //the super calls the constructor from pizza class
+        super(pizzaType, pizzaSize)
+       }
+       slice(){
+        console.log (`Our ${this.type} ${this.size} pizza has 8 slices.`)
+       }
+}
+const mySpecialty = new SpecialtyPizza("The works","medium")
+mySpecialty.slice()
+
+
+//Factory Function
+function pizzaFactory (pizzaSize){
+    const crust ="original"
+    const size = pizzaSize
+
+    return{
+        bake:() => console.log(`baking a ${size} ${crust} crust pizza`)
+    };
+}
+const myPizzaFactory = pizzaFactory("small");
+myPizzaFactory.bake();
+
+console.log("----------------JSON----------------");
