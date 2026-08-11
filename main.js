@@ -18,7 +18,11 @@ console.log = function (...args) {
 
     // Create new log entry
     const logEntry = document.createElement('div');
-    logEntry.textContent = args.join(' ');
+    logEntry.textContent = args.map(arg =>
+        typeof arg === 'object' && arg !== null
+            ? JSON.stringify(arg, null, 2)
+            : String(arg)
+    ).join(' ');
     logEntry.style.padding = '8px 12px';
     logEntry.style.marginBottom = '10px';
     logEntry.style.borderRadius = '4px';
@@ -26,6 +30,7 @@ console.log = function (...args) {
     logEntry.style.backgroundColor = '#2a1a1a';
     logEntry.style.border = '1px solid #ff5252';
     logEntry.style.borderLeft = '3px solid #ff5252';
+    logEntry.style.whiteSpace = 'pre-wrap'; // keep JSON formatting
 
     // Insert at top
     output.prepend(logEntry);
@@ -530,3 +535,24 @@ const myPizzaFactory = pizzaFactory("small");
 myPizzaFactory.bake();
 
 console.log("----------------JSON----------------");
+
+const myJsonObj = {
+    name: "Dave",
+    hobbies: ["eat", "sleep", "code"],
+    hello: function () {
+        console.log("Hello!");
+    }
+};
+
+console.log("logging object directly: ",myJsonObj);
+console.log("name:",myJsonObj.name);
+myJsonObj.hello();
+console.log("type:",typeof myJsonObj);
+
+const sendJson = JSON.stringify(myJsonObj);// converst object to json
+console.log(sendJson)//json string format actualy displayable
+console.log("type: ", typeof sendJson)//type is now string as shown in log
+console.log(sendJson.name)// object not accessable anymore
+
+const reciveJSON = JSON.parse(sendJson);//json is recieved and turned in to an object
+console.log("object directly logged",reciveJSON);//undefined in disply log but in real log it is object
