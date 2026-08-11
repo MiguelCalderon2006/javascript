@@ -556,3 +556,5 @@ console.log(sendJson.name)// object not accessable anymore
 
 const reciveJSON = JSON.parse(sendJson);//json is recieved and turned in to an object
 console.log("object directly logged",reciveJSON);//undefined in disply log but in real log it is object
+
+console.log("----------------Handling Errors----------------");
