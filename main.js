@@ -463,7 +463,7 @@ class Pizza{
     }
 
     setToppings(toppings){
-       this.toppings.push(toppings);
+       this.toppings.push(toppings)
     }
 
     //is called when you access this propertey "myPizza.pizzaCrust"
@@ -558,3 +558,43 @@ const reciveJSON = JSON.parse(sendJson);//json is recieved and turned in to an o
 console.log("object directly logged",reciveJSON);//undefined in disply log but in real log it is object
 
 console.log("----------------Handling Errors----------------");
+//JS strict mode. enforces certain js rules
+"use strict";
+
+//this shit dont work you need to declare variable tgype
+//this is a refrence error when you remove const
+ const variable ="mike"; 
+console.log(variable)
+
+//a syntax error is not able to be caught and fixed 
+
+class customError {
+    constructor(message) {
+        this.name = "custom type";
+        this.message = message;
+        this.stack = `${this.name}: ${this.message}`;
+    }
+}
+
+const makeError = () => {
+    //run the risky code inside the try{}
+    try{
+        // instead of relying on a TypeError from reassigning const:
+        // throw creates the error on purpose
+        throw new customError("custom error throw");
+
+    }
+    //when the risky code fails from try, an error object is thrown bellow
+    // capture with whatever variable name you like
+    catch(error) { 
+        
+        //.stack propertey- full trace, tells you error type,explanation, line and function, and file
+        console.warn(error.stack);
+        
+    }
+    finally{
+        console.log("finaly logs at the end no matter what")
+    }
+};
+makeError();
+
