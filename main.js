@@ -598,3 +598,5 @@ const makeError = () => {
 };
 makeError();
 
+console.log("----------------DOM----------------");
+
