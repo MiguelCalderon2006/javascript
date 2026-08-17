@@ -180,11 +180,11 @@ no === yes ? console.log("unanimous") :
 // console.log("you chose: ", myBool)
 // let myName1 = prompt("pleasne enter your name");
 
- //myName1 ?
+//myName1 ?
 
 //console.log("Your chosen name is: ", myName1.trim())
-  //   :
-    // console.log("you did not enter a name.");
+//   :
+// console.log("you did not enter a name.");
 
 console.log("----------------Loops----------------");
 
@@ -361,16 +361,16 @@ const anotherObj = {
         afternoon: "iced tea"
     },
     action: function () {
-        return `hello nigga, are you ready for ${this.beverage.morning}`;
+        return `hello, are you ready for ${this.beverage.morning}`;
     }
 }
 
 //Dot notation(to read/access  poperty)
-console.log("Name:",myObj.name);
+console.log("Name:", myObj.name);
 
-console.log("Hobbies",anotherObj["hobbies"]);
-console.log("Morning beverage: ",anotherObj.beverage.morning);
-console.log("action:",anotherObj.action());
+console.log("Hobbies", anotherObj["hobbies"]);
+console.log("Morning beverage: ", anotherObj.beverage.morning);
+console.log("action:", anotherObj.action());
 
 
 const vehicle = {
@@ -387,9 +387,9 @@ truck.doors = 2;
 console.log(truck);
 console.log(truck.wheels);// Inheritance
 console.log(truck.engine());
-const car =  Object.create(vehicle);
+const car = Object.create(vehicle);
 car.doors = 4;
-car.engine = function (){
+car.engine = function () {
     return "Whoooosh!";
 };
 console.log(car.engine());
@@ -397,13 +397,13 @@ console.log(car.wheels);
 
 const tesla = Object.create(car);
 console.log(tesla.wheels);
-tesla.engine = function(){
+tesla.engine = function () {
     return "zzzzzzzzz..";
 };
 console.log(tesla.engine());
 
 const band = {
-    vocals:"Robert Plant",
+    vocals: "Robert Plant",
     guitar: "Jimmy Page",
     bass: "Jon Paul Jones",
     drums: "John Bonham"
@@ -411,80 +411,79 @@ const band = {
 
 
 delete band.drums;
-console.log(band.hasOwnProperty("drums")) 
+console.log(band.hasOwnProperty("drums"))
 
 console.log(Object.keys(band))
 console.log(Object.values(band))
 
-for(let job in band){
+for (let job in band) {
     console.log(`On ${job}, its ${band[job]}`);
 }
 
 //destructuring objects
 
-const {guitar:myVariable, bass:myBass } = band;
+const { guitar: myVariable, bass: myBass } = band;
 //myvariable is being defined as guitar value from band
 console.log(myVariable);
 console.log(myBass);
 
 //another way to do this is
 console.log("method 2 up above:");
-const {guitar, bass, vocals}= band;
+const { guitar, bass, vocals } = band;
 console.log(guitar);
 console.log(bass);
 console.log(vocals);
 
 //to pull a specific property from an object
 //destructuring within function parameter
-function sings({vocals}){//right here it is destructred
-return  `${vocals} sings` 
+function sings({ vocals }) {//right here it is destructred
+    return `${vocals} sings`
 };
 console.log(sings(band));
 
 console.log("----------------Classes----------------");
 
 //this is a class
-class Pizza{
-    
+class Pizza {
+
     //properties are created in the constructor
-    constructor (pizzaType, pizzaSize)//code runs when create an object with this class
-    
+    constructor(pizzaType, pizzaSize)//code runs when create an object with this class
+
     {
-      
+
         //values are passed to become properties(key value pairs)
         this.type = pizzaType
         this.size = pizzaSize
         this.crust = "original"
-        this.toppings  = []
+        this.toppings = []
     }
-    getToppings()
-    {
+    getToppings() {
         return this.toppings
     }
 
-    setToppings(toppings){
-       this.toppings.push(toppings)
+    setToppings(toppings) {
+        this.toppings.push(toppings)
     }
 
     //is called when you access this propertey "myPizza.pizzaCrust"
     //this is an example but it should do more work than just return it
     //all only if you use the get keyword method
-    getCrust(){
+    getCrust() {
         return this.crust;
     }
 
     //is called when you use asign operator "=" and passes what you assign as the new value
     //this is an example but it should do more work than just return it//all only if you use the get keyword method
-    setCrust(pizzaCrust){
-        this.crust= pizzaCrust;
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
     }
 
     // method that uses this to access object instance
-    bake(){
+    bake() {
         console.log(
-            `Baking a ${this.size} ${this.type} ${this.toppings} ${this.crust} crust pizza` 
+            `Baking a ${this.size} ${this.type} ${this.toppings} ${this.crust} crust pizza`
         )
-    } 
+    }
 }
 
 // this line creates a new empty object, but then passes 2 values to be ran through the constructor.
@@ -492,8 +491,8 @@ const myPizza = new Pizza("pepperoni", "small");
 
 
 
-myPizza.setCrust("niggatron")
-myPizza.setToppings ("chitlins")
+myPizza.setCrust("thin")
+myPizza.setToppings("chitlins")
 
 //getter is not used here. because propertey is accessed directly
 myPizza.bake();
@@ -509,26 +508,26 @@ console.log("the topping is ", myPizza.getToppings())
 
 //child class inheriting from parent Pizza class
 class SpecialtyPizza extends Pizza {
-    constructor(pizzaType,pizzaSize){
+    constructor(pizzaType, pizzaSize) {
 
         //the super calls the constructor from pizza class
         super(pizzaType, pizzaSize)
-       }
-       slice(){
-        console.log (`Our ${this.type} ${this.size} pizza has 8 slices.`)
-       }
+    }
+    slice() {
+        console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`)
+    }
 }
-const mySpecialty = new SpecialtyPizza("The works","medium")
+const mySpecialty = new SpecialtyPizza("The works", "medium")
 mySpecialty.slice()
 
 
 //Factory Function
-function pizzaFactory (pizzaSize){
-    const crust ="original"
+function pizzaFactory(pizzaSize) {
+    const crust = "original"
     const size = pizzaSize
 
-    return{
-        bake:() => console.log(`baking a ${size} ${crust} crust pizza`)
+    return {
+        bake: () => console.log(`baking a ${size} ${crust} crust pizza`)
     };
 }
 const myPizzaFactory = pizzaFactory("small");
@@ -544,10 +543,10 @@ const myJsonObj = {
     }
 };
 
-console.log("logging object directly: ",myJsonObj);
-console.log("name:",myJsonObj.name);
+console.log("logging object directly: ", myJsonObj);
+console.log("name:", myJsonObj.name);
 myJsonObj.hello();
-console.log("type:",typeof myJsonObj);
+console.log("type:", typeof myJsonObj);
 
 const sendJson = JSON.stringify(myJsonObj);// converst object to json
 console.log(sendJson)//json string format actualy displayable
@@ -555,15 +554,15 @@ console.log("type: ", typeof sendJson)//type is now string as shown in log
 console.log(sendJson.name)// object not accessable anymore
 
 const reciveJSON = JSON.parse(sendJson);//json is recieved and turned in to an object
-console.log("object directly logged",reciveJSON);//undefined in disply log but in real log it is object
+console.log("object directly logged", reciveJSON);//undefined in disply log but in real log it is object
 
 console.log("----------------Handling Errors----------------");
 //JS strict mode. enforces certain js rules
 "use strict";
 
-//this shit dont work you need to declare variable tgype
+//this does not work you need to declare variable type
 //this is a refrence error when you remove const
- const variable ="mike"; 
+const variable = "mike";
 console.log(variable)
 
 //a syntax error is not able to be caught and fixed 
@@ -578,7 +577,7 @@ class customError {
 
 const makeError = () => {
     //run the risky code inside the try{}
-    try{
+    try {
         // instead of relying on a TypeError from reassigning const:
         // throw creates the error on purpose
         throw new customError("custom error throw");
@@ -586,17 +585,15 @@ const makeError = () => {
     }
     //when the risky code fails from try, an error object is thrown bellow
     // capture with whatever variable name you like
-    catch(error) { 
-        
+    catch (error) {
+
         //.stack propertey- full trace, tells you error type,explanation, line and function, and file
         console.warn(error.stack);
-        
+
     }
-    finally{
+    finally {
         console.log("finaly logs at the end no matter what")
     }
 };
 makeError();
-
-console.log("----------------DOM----------------");
 

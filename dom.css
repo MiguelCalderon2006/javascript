@@ -1,0 +1,73 @@
+/* Reset and base styles */
+/* 
+#1a1a1a - page background
+#2d2d2d - card (main)
+#1e1e1e - log box
+#e0e0e0 - text
+#4a9eff - headings / accent
+#404040 - log box border
+rgba(0, 0, 0, 0.3) - card shadow */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.empty-container{
+  background-color:#1a1a1a;
+  padding: 2rem;
+}
+.page-link{
+  padding-bottom: 2rem;
+}
+h1 {
+  text-align: center;
+  color: #4a9eff;
+}
+body{
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding: 40px;
+ min-height: 100vh;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2d2d2d;
+  color:#4a9eff;
+  border-radius: 8px    ;
+  padding: 2rem;
+  gap: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: auto;
+}
+.div-container {
+  color:#1a1a1a;
+  background-color: #1a1a1a;
+  border: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.div-block {
+  width: 8rem;
+  height: 8rem;
+  background-color: #4a9eff;
+  border: solid #404040 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color:inherit;
+}
