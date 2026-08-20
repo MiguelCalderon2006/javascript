@@ -57,3 +57,5 @@ const createDiv = (parent, iter) => {
 
 for (let i = 1; i <= 4; i++)
     createDiv(divContainer, i);
+
+console.log("----------------Event Listeners----------------");
